@@ -1,0 +1,60 @@
+<header class="header-container d-flex justify-content-between">
+    <div class="left-container">
+        <div class="logo"><img class="logo" alt="logo" src="../../../assets/images/logo.png" /></div>
+        <div class="d-hide ham-icon" (click)="toggle()" [ngClass]="status? 'clicked':''">
+            <i class="bi bi-three-dots-vertical"></i>
+        </div>
+        <nav class="nav-content"  (click)="toggle()" [ngClass]="status? 'clicked':''">
+            <ul class="links">
+                <li class="fs-sm fw-400">
+                    <input type="checkbox" id="show-services">
+                    <label for="show-services" class="fs-sm fw-400"><i class="bi bi-list-stars"></i>
+                        All <i class="bi bi-caret-down-fill"></i></label>
+                    <ul>
+                        <li><a href="#" class="fs-sm fw-400">Home</a></li>
+                        <li><a href="#" class="fs-sm fw-400">Approvals</a></li>
+                        <li><a href="#" class="fs-sm fw-400">Assigned</a></li>
+                    </ul>
+                </li>
+                <li class="fs-sm fw-400">
+                    <a href="#">
+                        <i class="bi bi-star"></i>
+                        Favorites
+                    </a>
+                </li>
+                <li class="fs-sm fw-400">
+                    <a href="#">
+                    <i class="bi bi-clock-history"></i>
+                    History
+                </a>
+                </li>
+                <li class="fs-sm fw-400">
+                    <a href="#">                    
+                    <i class="bi bi-layout-text-window-reverse"></i>
+                    Workspace
+                </a>
+                </li>
+                <li class="fs-sm fw-400">
+                    <a href="#">
+                    <i class="bi bi-exclamation-triangle"></i>
+                    Icidents
+                </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <ul class="d-flex justify-content-between">
+        <li>
+            <i class="bi bi-search"></i>
+        </li>
+        <li>
+            <i class="bi bi-question-circle"></i>
+        </li>
+        <li>
+            <i class="bi bi-bell"></i>
+        </li>
+        <li>
+            <i class="bi bi-person-circle"></i>
+        </li>
+    </ul>
+</header>

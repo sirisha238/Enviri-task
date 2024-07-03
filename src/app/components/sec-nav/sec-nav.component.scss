@@ -1,0 +1,96 @@
+.sec-nav{
+    margin-left: 230px;
+    border-bottom: 1px solid #CCCCCC;
+    padding: 0 30px;
+    height: 58px;
+    box-sizing: border-box;
+    background: #dedede;
+    ul{
+        gap:20px;
+        li.state-search {
+            select{
+                border-radius: 0;
+                margin-left: 5px;
+            }
+            i.bi-search, i.bi-plus-lg{
+                display: inline-block;
+                background-color: #17406d;
+                vertical-align: middle;
+                height: 36px;
+                color: #fff;
+                padding: 3px 10px 0;
+            }
+        }
+    }
+}
+.ham-btn{
+    border: 1px solid #CCCCCC;
+    background: #fff;
+    border-radius: 5px;
+    width: 36px;
+    height: 36px;
+}
+.filter-container{
+    visibility: hidden;
+    z-index: -999;
+    top:-100px;
+    position: absolute;
+    margin-left: 230px;
+    padding: 15px 15px 0;
+    border-bottom: 1px solid #cccc;
+    transition: all .5s ease;
+    .d-flex{
+        gap: 10px;
+        margin-bottom: 15px;
+        button {
+            min-width: 60px;
+        }
+    }
+}
+.filter-container.show{
+    visibility: visible;
+    z-index: 1;
+    top:0px;
+    position: relative;
+    transition: all .5s ease;
+}
+@media screen and (max-width:1024px){
+    .sec-nav {
+        margin-left: 0px;
+        margin-top: 56px;
+    }
+    .filter-container{
+        margin-left: 0;
+    }
+}
+@media screen and (max-width:768px){
+    .sec-nav {
+        display: block !important;
+        height: auto;
+        padding: 12px 12px;
+        ul{
+            justify-content: center;
+            gap: 12px;
+            &.left-menu{
+                padding-bottom: 10px;
+                border-bottom: 1px solid #cacaca;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .filter-container{
+        .d-flex{
+            display: block !important;
+            select, input{
+                margin: 0px 0 8px !important;
+            }
+            button{
+                margin: 0 4px;
+            }
+            &.btm-controls{
+                border-top:1px solid #ccc ;
+                padding-top: 10px;
+            }
+        }
+    }
+}

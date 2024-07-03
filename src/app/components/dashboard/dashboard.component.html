@@ -1,0 +1,112 @@
+<div class="main-content">
+    <ul class="breadcrumb">
+        <li>
+            <a href="#">All</a>
+        </li>
+        <li> <a href="#">Active = True</a></li>
+        <li> <a href="#">Assigned to</a></li>
+        <li> <a href="#" class="active">Rukesh</a></li>
+    </ul>
+    <div class="data">
+        <div class="table-container">
+            <table class="table-primary table-collapsed">
+                <thead>
+                    <tr>
+                        <th><strong>S.No</strong></th>
+                        <th><strong>Opened</strong></th>
+                        <th><strong>Description</strong></th>
+                        <th><strong>Caller</strong></th>
+                        <th><strong>Division</strong></th>
+                        <th><strong>Opened by</strong></th>
+                        <th><strong>Priority</strong></th>
+                        <th><strong>State</strong></th>
+                        <th><strong>Category</strong></th>
+                        <th><strong>Assignment Group</strong></th>
+                        <th><strong>Assigned to</strong></th>
+                        <th><strong>Updated</strong></th>
+                        <th><strong>Updated by</strong></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (item of menuItems; track item.SNo){
+                    <tr>
+                        <td>{{item.SNo}}</td>
+                        <td>{{item.Opened}}</td>
+                        <td>{{item.Description}}</td>
+                        <td>{{item.Caller}}</td>
+                        <td>{{item.Division}}</td>
+                        <td>{{item.OpenedBy}}</td>
+                        <td>{{item.Priority}}</td>
+                        <td>@if(item.State == 'In-Progress')
+                            {
+                            <span class="status badge-yellow">In Progress</span>
+                            }
+                            @else if (item.State == 'Error')
+                            {
+                            <span class="status badge-red">Error</span>
+                            }
+                            @else if(item.State == 'Completed')
+                            {
+                            <span class="status badge-blue">Completed</span>
+                            }
+                        </td>
+                        <td>{{item.Category}}</td>
+                        <td>{{item.AssignmentGroup}}</td>
+                        <td>{{item.AssignedTo}}</td>
+                        <td>{{item.Updated}}</td>
+                        <td><a rel="noreferrer">{{item.UpdatedBy}}</a></td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+            <div class="list-view-table">
+                @for (item of menuItems; track item.SNo){
+                <ul class="row-info">
+                    <li><strong>S.no</strong>{{item.SNo}}</li>
+                    <li><strong>Opened</strong>{{item.Opened}}</li>
+                    <li><strong>Description</strong>{{item.Description}}</li>
+                    <li><strong>Caller</strong>{{item.Caller}}</li>
+                    <li><strong>Division</strong>{{item.Division}}</li>
+                    <li><strong>Opened By</strong>{{item.OpenedBy}}</li>
+                    <li><strong>Priority</strong>{{item.Priority}}</li>
+                    <li><strong>Status</strong>
+                        @if(item.State == 'In-Progress')
+                        {
+                        <span class="status badge-yellow">In Progress</span>
+                        }
+                        @else if (item.State == 'Error')
+                        {
+                        <span class="status badge-red">Error</span>
+                        }
+                        @else if(item.State == 'Completed')
+                        {
+                        <span class="status badge-blue">Completed</span>
+                        }
+                    </li>
+                    <li><strong>Category</strong>{{item.Category}}</li>
+                    <li><strong>Assignment Group</strong>{{item.AssignmentGroup}}</li>
+                    <li><strong>Assigned To</strong>{{item.AssignedTo}}</li>
+                    <li><strong>Updated</strong>{{item.Updated}}</li>
+                    <li><strong>Updated By</strong>{{item.UpdatedBy}}</li>
+                </ul>
+                }
+            </div>
+            <div class="page-footer d-flex align-items-center justify-content-between mt-3">
+                <div class="result-count">Showing 1 - 10 of 60 items</div>
+                <div class="pagination">
+                    <ul class=" d-flex align-items-center">
+                        <li class="active">
+                            <a href="#">1</a>
+                        </li>
+                        <li>
+                            <a href="#">2</a>
+                        </li>
+                        <li>
+                            <a href="#">3</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

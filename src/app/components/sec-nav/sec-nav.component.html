@@ -1,0 +1,60 @@
+<div class="sec-nav d-flex align-items-center justify-content-between">
+    <ul class="left-menu d-flex  align-items-center">
+        <li><i class="bi bi-list"></i></li>
+        <li (click)="toggle()" [ngClass]="clicked? 'show':''"><i class="bi bi-funnel"></i></li>
+        <li><i class="bi bi-chat-left-dots"></i></li>
+        <li class="state-search d-flex align-items-center ">
+            <span>Incidents</span>
+            <select class="form-select">
+                <option selected>Select State</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+            <i class="bi bi-search"></i>
+        </li>
+    </ul>
+    <ul class="right-menu d-flex  align-items-center">
+        <li><i class="bi bi-activity"></i></li>
+        <li><i class="bi bi-gear"></i></li>
+        <li class="state-search d-flex align-items-center ">
+            <select class="form-select">
+                <option selected>Select State</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+            <i class="bi bi-plus-lg"></i>
+        </li>
+    </ul>
+</div>
+
+
+<div class="filter-container" [ngClass]="clicked? 'show':''">
+        <div class="d-flex">
+            <select class="custom-select custom-select-sm mx-1">
+                <option value="active">Active</option>
+            </select>
+            <select class="custom-select custom-select-sm mx-1">
+                <option value="is">is</option>
+            </select>
+            <select class="custom-select custom-select-sm mx-1">
+                <option value="true">true</option>
+            </select>
+            <button class="btn btn-outline-primary btn-sm">AND</button>
+            <button class="btn btn-outline-primary btn-sm">OR</button>
+            <button class="btn btn-outline-danger btn-sm">X</button>
+        </div>
+        <div class="d-flex btm-controls">
+            <select class="custom-select custom-select-sm mx-1">
+                <option value="active">Active</option>
+            </select>
+            <select class="custom-select custom-select-sm mx-1">
+                <option value="is">is</option>
+            </select>
+            <input type="text" class="form-control form-control-sm mx-1" value="Rukesh Asurati">
+            <button class="btn btn-outline-primary btn-sm">AND</button>
+            <button class="btn btn-outline-primary btn-sm">OR</button>
+            <button class="btn btn-outline-danger btn-sm">X</button>
+        </div>
+</div>

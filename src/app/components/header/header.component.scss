@@ -1,0 +1,131 @@
+.header-container{
+    border-right: 1px solid #CCCCCC;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 99;
+    background: #17406d;
+    width: 230px;
+    flex-direction: column;
+    nav{
+        i{
+            padding-right: 6px;
+            position: relative;
+            top: 2px;
+        }
+        li{
+            padding-top: 12px;
+            position: relative;
+            &:first-child{
+                padding-top: 0px;
+            }
+            ul{
+                margin-left: 20px;
+                li:first-child{
+                    margin-top:10px
+                }
+            }
+        }
+    }
+    ul {   
+        color: #fff;   
+    }
+    .logo{
+        width: 150px;
+        margin-bottom: 20px;
+    }
+}
+nav #show-menu:checked ~ .nav-content .links {
+    left: 0%;
+  }
+  .nav-content .links li a,
+  .nav-content .links li label {
+    cursor: pointer;
+    color: #fff;
+    display: block;
+  }
+  i.bi.bi-caret-down-fill {
+        font-size: 13px;
+        position: absolute !important;
+        right: 0;
+        top: 19px !important;
+        transform: translateY(-50%);
+    }
+.nav-content .links ul,
+.nav-content .links ul ul {
+  position: static;
+  opacity: 1;
+  visibility: visible;
+  background: none;
+  max-height: 0px;
+  overflow: hidden;
+}
+.nav-content .links #show-features:checked ~ ul,
+.nav-content .links #show-services:checked ~ ul,
+.nav-content .links #show-items:checked ~ ul {
+  max-height: 100vh;
+}
+input[type=checkbox]{
+    display: none;
+}
+@media screen and (max-width:1024px){
+    .header-container{
+        border-bottom: 1px solid #CCCCCC;
+        border-right: 0;
+        box-sizing: border-box;
+        bottom: auto;
+        right: 0;
+        width: 100%;
+        flex-direction: row;
+        padding: 12px 20px;
+        ul{
+            gap:20px;
+        }
+        .logo{
+            width: 100px;
+            margin-bottom: 0px;
+        }
+    }
+    .left-container{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+   
+    nav{
+        visibility: hidden;
+        position: fixed;
+        top: 55px;
+        background-color: rgb(23 64 109 / 0%);
+        left: -300px;
+        bottom: 0;
+        right:auto;
+        z-index: -99;
+        transition: all .5s ease;
+
+        ul{
+            background-color: rgba(23, 64, 109, 0.8);
+            padding: 20px;
+            max-width: 220px;
+            height: 100%;
+            ul{
+                padding: 0;
+            }
+        }
+    }
+    .ham-icon i{
+        color: #fff;
+    }
+
+    nav.clicked{
+        z-index: 99;
+        visibility: visible;
+        background-color: rgb(23 64 109 / 30%);
+        transition: all .5s ease;
+        left: 0;
+        right: 0;
+    }
+}

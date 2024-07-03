@@ -1,0 +1,142 @@
+ul{
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+}
+img{
+    width: auto;
+    max-width: 100%;
+    height: auto;
+}
+i.bi {
+    font-size: 20px;
+}
+a{
+    text-decoration: none;
+}
+input,select{
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 100%;
+    height: 38px !important;
+    box-sizing: border-box;
+}
+input[type="checkbox"] {
+    width: 14px;
+    height: 14px;
+}
+.table-container{
+    width: 100%;
+    overflow: hidden;
+}
+table{
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+    border-radius: 5px;
+}
+tr, th {
+    border-bottom: 1px solid #ccc;
+    text-align: left;
+}
+th{
+    background: #F7F7F7;
+    color: #5C6163;
+}
+td,th{
+    padding: 16px 10px;
+    vertical-align: middle;
+    border-bottom: 1px solid #ccc;
+    font-size: 12px;
+}
+tr:last-child{
+    border-bottom: 0;
+}
+body{
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+}
+/*
+.search-bar form{
+    position: relative;
+    input{
+        padding-left: 33px ;
+        background: transparent;
+        color: #fff;
+        border-width: 0 0 1px 0;
+        border-radius: 0;
+
+        &::-webkit-input-placeholder,
+        &:-ms-input-placeholder, 
+        &::-ms-input-placeholder{
+            color: #fff;
+        }
+        &:focus-visible,&:active{
+            border-width: 0 0 1px 0;
+            border-radius: 0;
+
+        }
+    }
+    .search-icon{
+        position: absolute;
+        left: 10px;
+        background: transparent;
+        top: 50%;
+        transform: translateY(-50%);
+        border: 0;
+        padding: 0;
+        i.bi {
+            font-size: 17px;
+            color: #fff;
+        }
+    }
+}*/
+/* FOnts */
+.fs-xs{
+    font-size: 12px;
+}
+.fs-sm{
+    font-size: 14px;
+}
+.fw-400{
+    font-weight: 400;
+}
+.fw-500{
+    font-weight: 500;
+}
+.fw-600, strong{
+    font-weight: 600;
+}
+
+
+
+.status{
+    border-radius: 20px;
+    padding: 4px 12px;
+    text-wrap: nowrap;
+    border: 1px solid #5C6163;
+    font-size: 12px;
+}
+.badge-blue{
+    border-color: #B3DAFF;
+    background-color: #F0F8FF;
+    color: #005AAD;
+}
+.badge-red{
+    color: #C03131;
+    border-color: #FEC1C1;
+    background-color: #FFF4F4;
+}
+.badge-yellow{
+    background-color: #FFFBEB;
+    border-color: #FDE68A;
+    color: #D37E00;
+}
+
+@media screen and (min-width:1024px){
+    .d-hide{
+        display: none;
+    }
+}
